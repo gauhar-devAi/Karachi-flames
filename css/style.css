@@ -1,0 +1,402 @@
+:root {
+  --bg-primary: #1d1919;
+  --bg-card:    #141414;
+  --accent:     #F5C518;
+  --text-white: #ffffff;
+  --text-muted: #aaaaaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ── Navbar ── */
+#mainNav {
+  background-color: #0a0a0a;
+  padding: 12px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.img-logo {
+  height: 55px;
+  width: auto;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-white);
+  font-weight: 400;
+  padding: 8px 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent);
+}
+
+.navbar-toggler {
+  border: 1px solid var(--accent);
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.btn-order {
+  background-color: var(--accent);
+  color: #000000;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-order:hover {
+  opacity: 0.85;
+}
+
+/* hero section starts */
+#hero{
+  /* background-image: url("../images/3.jpg"); */
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/3.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.content-all h1{
+  font-weight: 700;
+  font-size: 60px;
+  
+}
+.content-all p{
+  color: var(--text-muted);
+  font-size: 18px;
+  margin: 16px 0 28px 0;
+  
+}
+
+/* About section starts */
+#about {
+  padding: 80px 0;
+  background-color: #141414;
+}
+
+/* Row pe add karo */
+.about-section-row {
+  align-items: center;
+}
+
+.about-img{
+   width: 100%;
+   height: 350px;
+   object-fit: cover;
+   border-radius: 12px;
+
+   
+}
+.about-content h3{
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+.about-content h3::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.about-content p{
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.about-content button{
+  background-color: var(--accent);
+  color: #000000;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Menu Section starts here */
+#menu{
+  background-color: #0b0b0b;  /*Deep Dark background*/
+  padding: 60px 0;
+}
+
+.section-title {
+  color: #ffcc00; /* Yellow Title */
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Tabs Styling */
+.menu-tabs {
+  margin-bottom: 40px;
+}
+
+
+.tab-btn{
+  background-color: #1a1a1a;
+  color: #a0a0a0;
+  border: 1px solid #2a2a2a;
+  padding: 10px 25px;
+  margin: 0 5px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Active Tab Style (Yellow Background) */
+.tab-btn.active, .tab-btn:hover {
+  background-color: #ffcc00;
+  color: #000000;
+  border-color: #ffcc00;
+}
+
+
+/* Shuru mein sirf starters nazar ayenge, baaki categories chup jayengi */
+/* Yeh likho instead */
+
+
+
+
+
+
+/* Card General Styling */
+.menu-card{
+  background-color: #161616;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+
+.menu-card img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+
+}
+
+/* Card Body (Text Section) */
+.menu-card-body{
+  padding: 20px;
+  background-color: #121212;
+}
+
+.menu-card-body h5 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+
+.price {
+  color: #ffcc00; /* Yellow Price */
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+
+/* Gallery Items */
+#gallery{
+  padding: 80px 0;
+  background-color: var(--bg-primary);
+
+
+}
+.gallery-item img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Sirf 10% zoom, bohot hi classy lagega (7 nahi, 1.1 likhein) */
+}
+
+
+/* contact sections */
+#contact {
+  background-color: #141414; /* Dark Background */
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+.contact-subtext {
+  color: #a0a0a0;
+  margin-bottom: 40px;
+}
+
+/* Info Box Layout */
+.info-box{
+   display: flex; 
+   align-items: flex-start; 
+   margin-bottom: 30px;
+}
+
+/* Icons Styling*/
+.info-box i{
+  font-size: 24px;
+  color: #ffcc00; /* Yellow Accent Color */
+  background-color: #222222;
+  /* padding: 15px;  */
+  border-radius: 50%;
+  margin-right: 20px;
+   width: 54px;
+  height: 54px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.info-box h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+
+.info-box p, .info-box p a {
+  color: #a0a0a0;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.info-box p a:hover {
+  color: #ffcc00;
+}
+
+
+/* Right Column Placeholder */
+.contact-map {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+}
+
+
+#footer {
+  background-color: #0b0b0b; /* Deep Black Background */
+  padding: 50px 0 20px 0; 
+  color: #ffffff;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-logo h3 {
+  font-family: 'Playfair Display', serif;
+  color: #ffcc00; /* Yellow Accent */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Social Icons Layout & Hover Effect */
+.footer-socials {
+  margin-bottom: 25px;
+}
+
+.social-icon{
+  display: inline-flex;
+   align-items: center;
+  justify-content: center; 
+  color: #ffffff;
+  background-color: #1a1a1a;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin: 0 8px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.social-icon:hover {
+  background-color: #ffcc00; /* Hover par yellow background */
+  color: #000000;            /* Icon black ho jayega */
+  transform: translateY(-5px); /* Chota sa lift up effect */
+}
+
+
+/* Quick Links in Footer */
+.footer-links {
+  margin-bottom: 25px;
+}
+
+.footer-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+
+/* Divider Line */
+.footer-divider {
+  border-top: 2px solid #222222;
+  margin: 20px 0;
+}
+
+/* Copyright Text */
+.footer-copyright p {
+  color: #666666;
+  font-size: 13px;
+  margin-bottom: 0;
+}
