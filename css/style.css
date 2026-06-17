@@ -1,7 +1,7 @@
 :root {
   --bg-primary: #1d1919;
-  --bg-card:    #141414;
-  --accent:     #F5C518;
+  --bg-card:     #141414;
+  --accent:      #F5C518;
   --text-white: #ffffff;
   --text-muted: #aaaaaa;
 }
@@ -16,6 +16,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-white);
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 h1, h2, h3 {
@@ -69,9 +70,8 @@ h1, h2, h3 {
   opacity: 0.85;
 }
 
-/* hero section starts */
-#hero{
-  /* background-image: url("../images/3.jpg"); */
+/* Hero Section */
+#hero {
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/3.jpg");
   height: 100vh;
   background-size: cover;
@@ -79,44 +79,37 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.content-all h1{
+.content-all h1 {
   font-weight: 700;
   font-size: 60px;
-  
 }
-.content-all p{
+
+.content-all p {
   color: var(--text-muted);
   font-size: 18px;
   margin: 16px 0 28px 0;
-  
 }
 
-/* About section starts */
+/* About Section */
 #about {
   padding: 80px 0;
   background-color: #141414;
 }
 
-/* Row pe add karo */
-.about-section-row {
-  align-items: center;
+.about-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.about-img{
-   width: 100%;
-   height: 350px;
-   object-fit: cover;
-   border-radius: 12px;
-
-   
-}
-.about-content h3{
+.about-content h3 {
   font-weight: 700;
   margin-bottom: 22px;
 }
+
 .about-content h3::after {
   content: '';
   display: block;
@@ -127,96 +120,66 @@ h1, h2, h3 {
   margin-bottom: 20px;
 }
 
-.about-content p{
+.about-content p {
   color: var(--text-muted);
   margin-bottom: 18px;
 }
 
-.about-content button{
-  background-color: var(--accent);
-  color: #000000;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-
-/* Menu Section starts here */
-#menu{
-  background-color: #0b0b0b;  /*Deep Dark background*/
+/* Menu Section */
+#menu {
+  background-color: #0b0b0b;
   padding: 60px 0;
 }
 
 .section-title {
-  color: #ffcc00; /* Yellow Title */
+  color: #ffcc00;
   font-weight: 700;
   margin-bottom: 30px;
 }
 
-/* Tabs Styling */
 .menu-tabs {
   margin-bottom: 40px;
 }
 
-
-.tab-btn{
+.tab-btn {
   background-color: #1a1a1a;
   color: #a0a0a0;
   border: 1px solid #2a2a2a;
   padding: 10px 25px;
-  margin: 0 5px;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-
-
-/* Active Tab Style (Yellow Background) */
 .tab-btn.active, .tab-btn:hover {
   background-color: #ffcc00;
   color: #000000;
   border-color: #ffcc00;
 }
 
-
-/* Shuru mein sirf starters nazar ayenge, baaki categories chup jayengi */
-/* Yeh likho instead */
-
-
-
-
-
-
-/* Card General Styling */
-.menu-card{
+/* Card Styling */
+.menu-card {
   background-color: #161616;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid #222;
   transition: transform 0.3s ease;
+  height: 100%; /* Height equal karne ke liye */
 }
 
 .menu-card:hover {
-  transform: translateY(-5px); /* Hover effect */
+  transform: translateY(-5px);
 }
 
-
-.menu-card img{
+.menu-card img {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
   display: block;
-
 }
 
-/* Card Body (Text Section) */
-.menu-card-body{
+.menu-card-body {
   padding: 20px;
   background-color: #121212;
 }
@@ -228,38 +191,38 @@ h1, h2, h3 {
   margin-bottom: 8px;
 }
 
-
 .price {
-  color: #ffcc00; /* Yellow Price */
+  color: #ffcc00;
   font-weight: 700;
   margin-bottom: 0;
 }
 
-
-/* Gallery Items */
-#gallery{
+/* Gallery Section */
+#gallery {
   padding: 80px 0;
   background-color: var(--bg-primary);
-
-
 }
-.gallery-item img{
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 10px;
+  display: block;
   transition: transform 0.3s ease;
-
 }
 
 .gallery-item:hover img {
-  transform: scale(1.1); /* Sirf 10% zoom, bohot hi classy lagega (7 nahi, 1.1 likhein) */
+  transform: scale(1.1);
 }
 
-
-/* contact sections */
+/* Contact Section */
 #contact {
-  background-color: #141414; /* Dark Background */
+  background-color: #141414;
   padding: 80px 0;
   color: #ffffff;
 }
@@ -269,29 +232,25 @@ h1, h2, h3 {
   margin-bottom: 40px;
 }
 
-/* Info Box Layout */
-.info-box{
-   display: flex; 
-   align-items: flex-start; 
-   margin-bottom: 30px;
+.info-box {
+  display: flex; 
+  align-items: flex-start; 
+  margin-bottom: 30px;
 }
 
-/* Icons Styling*/
-.info-box i{
+.info-box i {
   font-size: 24px;
-  color: #ffcc00; /* Yellow Accent Color */
+  color: #ffcc00;
   background-color: #222222;
-  /* padding: 15px;  */
   border-radius: 50%;
   margin-right: 20px;
-   width: 54px;
+  width: 54px;
   height: 54px; 
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex-shrink: 0; /* Icon micro screens par squeeze na ho */
 }
-
 
 .info-box h4 {
   font-size: 18px;
@@ -299,7 +258,6 @@ h1, h2, h3 {
   margin-bottom: 5px;
   color: #ffffff;
 }
-
 
 .info-box p, .info-box p a {
   color: #a0a0a0;
@@ -311,8 +269,6 @@ h1, h2, h3 {
   color: #ffcc00;
 }
 
-
-/* Right Column Placeholder */
 .contact-map {
   width: 100%;
   height: 350px;
@@ -321,17 +277,16 @@ h1, h2, h3 {
   border: 1px solid #2a2a2a;
 }
 
-
+/* Footer Section */
 #footer {
-  background-color: #0b0b0b; /* Deep Black Background */
+  background-color: #0b0b0b;
   padding: 50px 0 20px 0; 
   color: #ffffff;
   border-top: 1px solid #1a1a1a;
 }
 
 .footer-logo h3 {
-  font-family: 'Playfair Display', serif;
-  color: #ffcc00; /* Yellow Accent */
+  color: #ffcc00;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -341,14 +296,13 @@ h1, h2, h3 {
   margin-bottom: 25px;
 }
 
-/* Social Icons Layout & Hover Effect */
 .footer-socials {
   margin-bottom: 25px;
 }
 
-.social-icon{
+.social-icon {
   display: inline-flex;
-   align-items: center;
+  align-items: center;
   justify-content: center; 
   color: #ffffff;
   background-color: #1a1a1a;
@@ -361,15 +315,12 @@ h1, h2, h3 {
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-
 .social-icon:hover {
-  background-color: #ffcc00; /* Hover par yellow background */
-  color: #000000;            /* Icon black ho jayega */
-  transform: translateY(-5px); /* Chota sa lift up effect */
+  background-color: #ffcc00;
+  color: #000000;      
+  transform: translateY(-5px);
 }
 
-
-/* Quick Links in Footer */
 .footer-links {
   margin-bottom: 25px;
 }
@@ -377,7 +328,6 @@ h1, h2, h3 {
 .footer-links a {
   color: #a0a0a0;
   text-decoration: none;
-  margin: 0 15px;
   font-size: 15px;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -387,16 +337,42 @@ h1, h2, h3 {
   color: #ffcc00;
 }
 
-
-/* Divider Line */
 .footer-divider {
   border-top: 2px solid #222222;
   margin: 20px 0;
 }
 
-/* Copyright Text */
 .footer-copyright p {
   color: #666666;
   font-size: 13px;
   margin-bottom: 0;
+}
+
+/* ── Media Queries for Full Responsiveness ── */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #0a0a0a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-all h1 {
+    font-size: 38px;
+  }
+  .content-all p {
+    font-size: 15px;
+  }
+  #hero {
+    height: 80vh;
+  }
+  #about, #menu, #gallery, #contact {
+    padding: 50px 0;
+  }
+  .tab-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 }

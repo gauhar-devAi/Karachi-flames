@@ -1,40 +1,34 @@
- const tabBtns = document.querySelectorAll('.tab-btn');
- const menuCards = document.querySelectorAll('.menu-card-wrap');
+const tabBtns = document.querySelectorAll('.tab-btn');
+const menuCards = document.querySelectorAll('.menu-card-wrap');
 
- menuCards.forEach(card =>{
-      if(card.getAttribute('data-category') !== 'starters'){
+// Shuru mein baaki categories hide karo sirf starters dikhao
+menuCards.forEach(card => {
+  if (card.getAttribute('data-category') !== 'starters') {
+    card.style.display = 'none';
+  }
+});
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Tamam buttons se active class remove karo
+    tabBtns.forEach(b => b.classList.remove('active'));
+    
+    // Sirf clicked button par active class add karo
+    btn.classList.add('active');
+
+    const selectCategory = btn.getAttribute('data-category');
+
+    menuCards.forEach(card => {
+      const cardCategory = card.getAttribute('data-category');
+
+      if (selectCategory === cardCategory) {
+        card.style.display = '';
+      } else {
         card.style.display = 'none';
       }
     });
-
-      tabBtns.forEach(btn =>{
-          
-         btn.addEventListener('click', () =>{
-            
-          tabBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.remove('active');
-          btn.classList.add('active');
-
-          const selectCategory = btn.getAttribute('data-category');
-
-          menuCards.forEach(card =>{
-            const cardCategory = card.getAttribute('data-category');
-
-            if(selectCategory === cardCategory){
-
-              card.style.display = '';
-
-            }
-            else{
-              card.style.display = 'none';
-            }
-
-          });
-
-      });
- });
-
-
+  });
+});
 
 
 
